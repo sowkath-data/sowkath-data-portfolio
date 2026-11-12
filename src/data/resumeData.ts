@@ -28,6 +28,28 @@ export const RESUME_DATA: ResumeData = {
 
   projects: [
     {
+      id: "proj-supply-chain",
+      title: "Supply Chain Operations & Logistics Analytics",
+      badge: "Personal Project",
+      technologies: [
+        "Python",
+        "Pandas",
+        "SQL",
+        "Power BI",
+        "MS Excel"
+      ],
+      techString: "Python | Pandas | SQL | Power BI | MS Excel",
+      description:
+        "Developed an end-to-end supply chain analytics solution using an FMCG retail dataset (100+ SKUs) to evaluate revenue generation, inventory stock levels, and logistics performance.",
+      highlights: [
+        "Developed an end-to-end supply chain analytics solution using an FMCG retail dataset (100+ SKUs) to evaluate revenue generation, inventory stock levels, and logistics performance.",
+        "Performed data preprocessing, cleaning, and exploratory data analysis (EDA) using MS Excel and Python (Pandas) to handle missing values, duplicates, and data anomalies.",
+        "Executed SQL queries to analyze carrier shipping efficiency and track high-risk suppliers with elevated defect rates.",
+        "Designed an executive dark-themed Power BI dashboard featuring custom glowing KPI cards, demand-supply tracking charts, and dynamic Slicers."
+      ],
+      githubUrl: "https://github.com/Sowkath2004/Supply-Chain-Analytics-Project"
+    },
+    {
       id: "proj-employee-attrition",
       title: "Employee Attrition Prediction",
       badge: "Personal Project",
