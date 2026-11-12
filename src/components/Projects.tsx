@@ -9,7 +9,6 @@ import {
 import { RESUME_DATA } from '../data/resumeData';
 
 export const Projects: React.FC = () => {
-  // 3 projects irukkura array-la irunthu top 2 projects-a edukurom
   const supplyChainProject = RESUME_DATA.projects[0];
   const attritionProject = RESUME_DATA.projects[1];
 
@@ -61,12 +60,10 @@ export const Projects: React.FC = () => {
                   {supplyChainProject.title}
                 </h3>
 
-                {/* Short Professional Description */}
                 <p className="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
                   {supplyChainProject.description}
                 </p>
 
-                {/* Technologies */}
                 <div className="mt-5 flex flex-wrap items-center gap-1.5">
                   {supplyChainProject.technologies.map((tech) => (
                     <span
@@ -79,7 +76,7 @@ export const Projects: React.FC = () => {
                 </div>
               </div>
 
-              {/* Key Work / Features from Resume */}
+              {/* Key Deliverables */}
               <div className="p-6 sm:p-7">
                 <div className="text-xs font-mono text-slate-400 uppercase tracking-wider mb-3.5 flex items-center justify-between">
                   <span>Key Deliverables & Workflow</span>
@@ -102,23 +99,33 @@ export const Projects: React.FC = () => {
               </div>
             </div>
 
-            {/* Bottom Actions & Dedicated GitHub Button */}
+            {/* Bottom Actions with Drive Link & GitHub */}
             <div className="px-6 py-4 sm:px-7 sm:py-5 bg-slate-950/80 border-t border-slate-800/90 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
               <div className="text-[11px] font-mono text-slate-400 truncate">
-                <span className="text-slate-500">Repo:</span> github.com/Sowkath2004/Supply-Chain-Analytics-Project
+                <span className="text-slate-500">Repo:</span> github.com/Sowkath2004/Supply-Chain...
               </div>
 
-              <a
-                id="btn-project-supply-chain-github"
-                href={supplyChainProject.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-bold text-xs sm:text-sm transition-all shadow-md shadow-cyan-500/20 active:scale-[0.98] shrink-0"
-              >
-                <Github className="w-4 h-4" />
-                <span>GitHub Repository</span>
-                <ExternalLink className="w-3.5 h-3.5" />
-              </a>
+              <div className="flex gap-2 shrink-0">
+                <a
+                  href="https://drive.google.com/file/d/1E-4oOrjVyPXcUIZAAnwO5USK2v9HfNyI/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-[11px] sm:text-xs transition-all shadow-md shadow-emerald-500/20"
+                >
+                  <span>View Dashboard</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+
+                <a
+                  href={supplyChainProject.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-bold text-[11px] sm:text-xs transition-all shadow-md shadow-cyan-500/20"
+                >
+                  <Github className="w-3.5 h-3.5" />
+                  <span>GitHub</span>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -145,12 +152,10 @@ export const Projects: React.FC = () => {
                   {attritionProject.title}
                 </h3>
 
-                {/* Short Professional Description */}
                 <p className="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
                   {attritionProject.description}
                 </p>
 
-                {/* Technologies */}
                 <div className="mt-5 flex flex-wrap items-center gap-1.5">
                   {attritionProject.technologies.map((tech) => (
                     <span
@@ -163,7 +168,7 @@ export const Projects: React.FC = () => {
                 </div>
               </div>
 
-              {/* Key Work / Features from Resume */}
+              {/* Key Deliverables */}
               <div className="p-6 sm:p-7">
                 <div className="text-xs font-mono text-slate-400 uppercase tracking-wider mb-3.5 flex items-center justify-between">
                   <span>Key Deliverables & Features</span>
@@ -183,21 +188,13 @@ export const Projects: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-
-                {/* Architecture Highlights Note */}
-                <div className="mt-5 p-3.5 rounded-xl bg-slate-950/60 border border-slate-800/80 text-xs text-slate-400 leading-relaxed flex items-start gap-2.5">
-                  <Server className="w-4 h-4 text-cyan-400 mt-0.5 shrink-0" />
-                  <span>
-                    Focuses on machine learning pipelines, predictive modeling, and data classification.
-                  </span>
-                </div>
               </div>
             </div>
 
-            {/* Bottom Actions & Dedicated GitHub Button */}
+            {/* Bottom Actions with GitHub only */}
             <div className="px-6 py-4 sm:px-7 sm:py-5 bg-slate-950/80 border-t border-slate-800/90 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
               <div className="text-[11px] font-mono text-slate-400 truncate">
-                <span className="text-slate-500">Repo:</span> github.com/sowkath-data/Employee-Attrition-Prediction
+                <span className="text-slate-500">Repo:</span> github.com/sowkath-data/Employee-Attrition
               </div>
 
               <a
@@ -205,9 +202,9 @@ export const Projects: React.FC = () => {
                 href={attritionProject.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-bold text-xs sm:text-sm transition-all shadow-md shadow-cyan-500/20 active:scale-[0.98] shrink-0"
+                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-bold text-[11px] sm:text-xs transition-all shadow-md shadow-cyan-500/20 active:scale-[0.98] shrink-0"
               >
-                <Github className="w-4 h-4" />
+                <Github className="w-3.5 h-3.5" />
                 <span>GitHub Repository</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
@@ -215,7 +212,6 @@ export const Projects: React.FC = () => {
           </div>
 
         </div>
-
       </div>
     </section>
   );
